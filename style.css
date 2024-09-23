@@ -1,12 +1,23 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.game-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('clouds-background.png') repeat-x;
+  animation: backgroundScroll 10s linear infinite;
+}
+
+@keyframes backgroundScroll {
+  from { background-position: 0 0; }
+  to { background-position: -100% 0; }
 }
 
 canvas {
-    display: block;
-    margin: 0 auto;
-    background-color: #fff;
-    border: 1px solid #000;
+  display: block;
+  background: transparent;
 }
